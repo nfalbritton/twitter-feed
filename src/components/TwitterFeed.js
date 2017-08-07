@@ -1,7 +1,7 @@
 import React from 'react';
-import Twet from './Tweet';
+import Tweet from './Tweet';
 
-const TwitterFeed = () => {
+const TwitterFeed = props => {
   let tweets = props.data.map(tweet => {
     return(
       <Tweet
@@ -20,11 +20,13 @@ const TwitterFeed = () => {
   });
 
   return(
-    <ul className="tweets">
-      {tweets}
-    </ul>
+    <div>
+      <ul>
+        {tweets}
+      </ul>
+    </div>
   );
-}
+};
 
 
 export default TwitterFeed;
