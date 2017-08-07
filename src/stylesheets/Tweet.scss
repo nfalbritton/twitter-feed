@@ -1,1 +1,53 @@
 /* YOUR STYLING HERE */
+li {
+  list-style-type: none;
+  border-style: solid;
+  border-width: 2px;
+  margin-bottom: 2px;
+  padding-top: 2px;
+
+}
+
+.pic {
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.screenName {
+  margin-left: 10px;
+  color: $grey;
+}
+
+.name {
+  font-weight: 400;
+}
+
+.names {
+  padding-top: 16px;
+  font-family: "Comic Sans MS";
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.likes {
+  color: $grey;
+  margin-top: 30px;
+  margin-bottom: 2px;
+}
+
+.text {
+  font-family: "Comic Sans MS";
+  font-size: 16px;
+  font-stretch: condensed;
+  font-weight: 500;
+}
+
+.red {
+  color: $red;
+  margin-bottom: 10px;
+}
+
+.green {
+  color: $green;
+  margin-bottom: 10px;
+}
