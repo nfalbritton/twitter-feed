@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.scss$/,
         use: [
