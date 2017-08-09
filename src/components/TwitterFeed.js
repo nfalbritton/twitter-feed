@@ -4,10 +4,10 @@ import Tweet from './Tweet';
 class TwitterFeed extends React.Component{
   constructor(props) {
     super(props);
-
       this.state = {
         selectedRetweet: null,
         likedTweet: null,
+
       }
 
       this.handleRetweetClick = this.handleRetweetClick.bind(this),
@@ -44,6 +44,17 @@ class TwitterFeed extends React.Component{
 
       let onLikeClick = () => this.handleLikeClick(tweet.favorited)
 
+
+      let media;
+      let mediaDisplay;
+        if('media' in tweet.entities){
+          media = tweet.entities.media[0].media_url;
+          mediaDisplay = tweet.entities.media[0].display_url
+        } else {
+          media = ""
+          mediaDisplay = ""
+        }
+
       return(
         <Tweet
           key={tweet.id_str}
@@ -60,6 +71,8 @@ class TwitterFeed extends React.Component{
           className={className}
           handleLikeClick={onLikeClick}
           likeName={likeName}
+          mediaUrl={media}
+          displayUrl={mediaDisplay}
         />
       )
     })
